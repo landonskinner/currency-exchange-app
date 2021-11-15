@@ -1,4 +1,5 @@
 import React from "react";
+import {Switch, Route} from 'react-router-dom';
 import Header from "./Header";
 import Search from "./Search";
 import Home from "./Home";
@@ -10,9 +11,17 @@ function App() {
     <div className="App">
        <Header />
        <Search />
-       <Home />
-       <FavoritesContainer />
-       <CurrencyContainer />
+       <Switch>
+         <Route exact to="/">
+            <Home />
+         </Route>
+         <Route to="/currency">
+            <CurrencyContainer />
+         </Route>
+         <Route to="/favorites">
+            <FavoritesContainer />
+         </Route>
+       </Switch>
     </div>
   );
 }
