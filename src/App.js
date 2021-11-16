@@ -5,6 +5,8 @@ import Search from "./Search";
 import Home from "./Home";
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
+import './App.css'
+
 
 function App() {
 
@@ -30,17 +32,17 @@ function App() {
     <div className="App">
        <Header />
        <Search />
-       {/* <Switch>
-         <Route exact to="/"> */}
+       <Switch>
+         <Route exact path="/">
             <Home />
-         {/* </Route>
-         <Route to="/currency"> */}
+         </Route>
+         <Route path="/currency">
             {!!currencyExchange ? <CurrencyContainer currency={currency} currencyExchange={currencyExchange} /> : null}
-         {/* </Route>
-         <Route to="/favorites"> */}
+         </Route>
+         <Route path="/favorites">
             <FavoritesContainer />
-         {/* </Route>
-       </Switch> */}
+         </Route>
+       </Switch>
     </div>
   );
 }
