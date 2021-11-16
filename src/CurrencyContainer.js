@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownItem from 'react-bootstrap/DropdownItem'
+// import DropdownButton from 'react-bootstrap/DropdownButton';
+// import Dropdown from 'react-bootstrap/Dropdown';
+// import DropdownItem from 'react-bootstrap/DropdownItem'
 import CurrencyCard from './CurrencyCard';
 import NotesForm from './NotesForm';
 
