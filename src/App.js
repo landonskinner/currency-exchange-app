@@ -5,6 +5,7 @@ import Search from "./Search";
 import Home from "./Home";
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
+import './App.css'
 
 function App() {
   return (
