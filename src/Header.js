@@ -12,7 +12,7 @@ function Header() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link path="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             Currency Exchange <i className="fas fa-money-bill-wave" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -20,13 +20,13 @@ function Header() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link path="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                path="/currencies"
+                to="/currency"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
@@ -35,7 +35,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                path="/favorites"
+                to="/favorites"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >

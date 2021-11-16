@@ -5,7 +5,7 @@ import NotesForm from './NotesForm';
 function CurrencyContainer() {
     return (
         <div>
-            
+            <NotesForm />
         </div>
     )
 }

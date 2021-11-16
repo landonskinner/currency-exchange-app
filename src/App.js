@@ -7,19 +7,20 @@ import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
 
+
 function App() {
   return (
     <div className="App">
        <Header />
        <Search />
        <Switch>
-         <Route exact to="/">
+         <Route exact path="/">
             <Home />
          </Route>
-         <Route to="/currency">
+         <Route path="/currency">
             <CurrencyContainer />
          </Route>
-         <Route to="/favorites">
+         <Route path="/favorites">
             <FavoritesContainer />
          </Route>
        </Switch>
