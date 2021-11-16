@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import styled from 'styled-components'
 
 
 function FilterForm({filter, handleSearchFilter, LHFilter, handleLHFilter, HLFilter, handleHLFilter}) {
 
 
     return (
-        <div className="filter-forms">
+        <Form>
             <h1>Narrow Your Search!</h1>
             <form id="currency-search">
                 <label htmlFor="filter">Search for a currency to compare:</label><br/>
@@ -17,8 +18,25 @@ function FilterForm({filter, handleSearchFilter, LHFilter, handleLHFilter, HLFil
                 <input type="checkbox" id="HLFilter" checked={HLFilter} onChange={(e) => handleHLFilter(e)}></input>
                 <label htmlFor="HLFilter">Filter Currencies by Exchange Rate (High to Low)</label>
             </form>
-        </div>
+        </Form>
     )
 }
 
 export default FilterForm
+
+const Form = styled.div`
+    #currency-search {
+        padding: 5px;
+        margin: 5px;
+    }
+    
+    #filter {
+        width: 60%;
+        height: 30px;
+    }
+    
+    label {
+        padding: 10px;
+        line-height: 20px;
+    }
+`
