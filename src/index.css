@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.currency-card {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: darkgrey;
+  border: 3px solid rgb(28, 27, 27);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(28, 27, 27);
+  width: 20%;
+}
+
+.currency-card:hover {
+  background-color: #b742d4;
+}
+
+.currency-name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.exhange-rate {
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.exchange-value {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.filter-forms {
+  padding: 12px;
+  margin: 30px auto;
+  color: white;
+  background-color: rgb(28, 27, 27);
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#currency-search {
+  padding: 5px;
+  margin: 5px;
+}
+
+#currency-search input {
+  width: 60%;
+  height: 30px;
+}
+
+.filter-forms label {
+  padding: 10px;
+  line-height: 20px;
+}
+
+.currency-container {
+  margin: auto;
+  text-align: center;
+}
