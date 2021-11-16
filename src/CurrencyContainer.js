@@ -1,8 +1,10 @@
+
 import React, {useState} from 'react';
 import CurrencyCard from './CurrencyCard';
 import NotesForm from './NotesForm';
 import FilterForm from './FilterForm';
 import Dropdown from './Dropdown';
+import styled from 'styled-components';
 
 
 function CurrencyContainer({currency, currencyExchange}) {
@@ -72,13 +74,35 @@ function CurrencyContainer({currency, currencyExchange}) {
     return (
         <div>
             <NotesForm />
-            <Dropdown selected={selected} setSelected={setSelected} />
-            <FilterForm filter={filter} handleSearchFilter={handleSearchFilter} LHFilter={LHFilter} handleLHFilter={handleLHFilter} HLFilter={HLFilter} handleHLFilter={handleHLFilter}/>
-           <div className="currency-container">
+
+
+             <Dropdown selected={selected} setSelected={setSelected} />
+            <FormStyle>
+                <FilterForm filter={filter} handleSearchFilter={handleSearchFilter} LHFilter={LHFilter} handleLHFilter={handleLHFilter} HLFilter={HLFilter} handleHLFilter={handleHLFilter}/>
+            </FormStyle>
+           <CardStyle style={{margin: 'auto', textAlign: 'center'}}>
                 {currencyRender()}
-           </div>
+           </CardStyle>
         </div>
     )
 }
 
 export default CurrencyContainer
+
+const CardStyle = styled.div`
+    div:hover {
+        animation-name: colorChange;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+    }
+`
+
+const FormStyle = styled.div`
+    padding: 12px;
+    margin: 30px auto;
+    color: white;
+    background-color: rgb(28, 27, 27);
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+`

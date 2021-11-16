@@ -20,7 +20,7 @@ function NotesForm() {
             onChange={(e) => setDescription(e.target.value)}
           />
         </label>
-        <button type="submit">Add Notes</button>
+        <button type="submit">Add Notes</button>``
       </form>
     </div>
   );
