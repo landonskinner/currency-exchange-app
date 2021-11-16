@@ -8,8 +8,9 @@ import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
 
 
-function App() {
 
+function App() {
+  
   // const [currency, setCurrency] = useState('usd')
   const currency = "ada"
   
@@ -36,7 +37,7 @@ function App() {
          <Route exact path="/">
             <Home />
          </Route>
-         <Route path="/currency">
+         <Route path="/currency">           
             {!!currencyExchange ? <CurrencyContainer currency={currency} currencyExchange={currencyExchange} /> : null}
          </Route>
          <Route path="/favorites">

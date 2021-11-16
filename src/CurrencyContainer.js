@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import CurrencyCard from './CurrencyCard';
 import NotesForm from './NotesForm';
 import FilterForm from './FilterForm';
+import Dropdown from './Dropdown';
+
 
 function CurrencyContainer({currency, currencyExchange}) {
     
@@ -63,10 +65,14 @@ function CurrencyContainer({currency, currencyExchange}) {
             })
         }
     }
+     
+    // declaring dropdown filter variables
+  const [selected, setSelected] = useState("Select Base Currency")
 
     return (
         <div>
             <NotesForm />
+            <Dropdown selected={selected} setSelected={setSelected} />
             <FilterForm filter={filter} handleSearchFilter={handleSearchFilter} LHFilter={LHFilter} handleLHFilter={handleLHFilter} HLFilter={HLFilter} handleHLFilter={handleHLFilter}/>
            <div className="currency-container">
                 {currencyRender()}
