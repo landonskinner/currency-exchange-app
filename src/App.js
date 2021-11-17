@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import Header from "./Header";
 import Search from "./Search";
 import Home from "./Home";
+import Landing from "./Landing"
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
@@ -34,15 +35,18 @@ function App() {
        <Header />
        <Search />
        <Switch>
-         <Route exact path="/">
+          <Route exact path="/">
             <Home />
-         </Route>
-         <Route path="/currency">           
+          </Route>
+          <Route path="/landing">
+            <Landing />
+          </Route>
+          <Route path="/currency">           
             {!!currencyExchange ? <CurrencyContainer currency={currency} currencyExchange={currencyExchange} /> : null}
-         </Route>
-         <Route path="/favorites">
+          </Route>
+          <Route path="/favorites">
             <FavoritesContainer />
-         </Route>
+          </Route>
        </Switch>
     </div>
   );
