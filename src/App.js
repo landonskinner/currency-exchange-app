@@ -10,6 +10,7 @@ import './App.css'
 
 
 
+
 function App() {
   
   // const [currency, setCurrency] = useState('usd')
@@ -29,6 +30,7 @@ function App() {
   }, [])
 
   console.log(currencyExchange)
+
 
   return (
     <div className="App">

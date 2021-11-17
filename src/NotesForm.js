@@ -1,12 +1,26 @@
 import React, { useState } from "react";
 
 function NotesForm() {
-  const [description, setDescription] = useState("");
+  const [notes, setNotes] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault()
-    const formData = { description }
-  }
+    e.preventDefault();
+    const formData = {
+      notes: notes
+    };
+
+    fetch("http://localhost:4000/currencies/1", {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((r) => r.json())
+      .then((newNotes) => {
+        console.log(newNotes);
+      }
+      )}
+
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -16,11 +30,11 @@ function NotesForm() {
             type="text"
             id="notes"
             placeholder="Insert notes here"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
           />
         </label>
-        <button type="submit">Add Notes</button>``
+        <button type="submit">Add Notes</button>
       </form>
     </div>
   );
