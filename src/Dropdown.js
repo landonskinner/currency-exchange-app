@@ -1,30 +1,33 @@
 import { useState } from "react";
+import "./index.css"
 
-function Dropdown({selected, setSelected}) {
-    const [isActive, setIsActive] = useState(false);
-    const options = ['Place Holder 1', 'Place Holder 2', 'Place Holder 3']
-    // const options = [{options}]
+function Dropdown({options, prompt, value, onChange, curVal}) {
+    const [open, setOpen] = useState(false);
+    
     return (
-        <div className="dropdown">
-            <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
-                {selected}
-                <span className="fas fa-caret-down"></span>
+        <div classname="dropdown">
+            <div 
+                classname="control" 
+                onClick={(e) => setOpen(!open)}
+                >
+                    {value ? value.symbol : prompt}
+                    <span classname="arrow"></span>
             </div>
-            {isActive && (
-            <div className="dropdown-content">
-                {options.map((option) => (
-                    <div onClick={(e) => {
-                        setSelected(option)
-                        setIsActive(false)
-                        }
-                    } className="dropdown-item">{option}</div>
-                ))}
-               
-
+           {open && (
+            <div className="options"> 
+            {options.currencies.map((option) => (
+                    <div 
+                    onClick={(e) => {
+                        onChange(option)
+                        setOpen(false)
+                    }
+                }className="selected-value"
+                    >{option.symbol}</div>
+                    ))}
             </div>
-            )}
+                )}
         </div>
-    );
+    )
 }
 
 export default Dropdown

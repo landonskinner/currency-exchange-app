@@ -7,14 +7,18 @@ import Landing from "./Landing"
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
-
-
+import Dropdown from './Dropdown';
+import currencies from "./db.json";
 
 
 function App() {
   
-  // const [currency, setCurrency] = useState('usd')
-  const currency = "ada"
+  const [currency, setCurrency] = useState('usd')
+  // const currency = 'usd'
+
+  
+  // declaring dropdown value variable
+    const [value, setValue] = useState(null)
   
 
   // currency variable used for testing -- eventually should reference value of currency selected from drop-down menu
@@ -35,6 +39,12 @@ function App() {
   return (
     <div className="App">
        <Header />
+       <Dropdown 
+        options={currencies}
+        prompt="Select Base Currency"
+        value={value}
+        onChange={val => setValue(val)}
+        />
        <Search />
        <Switch>
           <Route exact path="/">
