@@ -4,6 +4,7 @@ import CurrencyCard from './CurrencyCard';
 import NotesForm from './NotesForm';
 import FilterForm from './FilterForm';
 import styled from 'styled-components';
+import Dropdown from './Dropdown';
 
 
 function CurrencyContainer({ select, setSelect, currencyExchange, setCurrencyExchange}) {
