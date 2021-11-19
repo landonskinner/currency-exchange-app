@@ -6,6 +6,7 @@ import Landing from "./Landing"
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
+import Footer from './Footer';
 
 import Dropdown from "./Dropdown";
 import styled from "styled-components";
@@ -51,7 +52,7 @@ function App() {
             <FavoritesContainer />
           </Route>
        </Switch>
-       <FooterStyle className="footer">Hello</FooterStyle>
+       <Footer />
     </div>
   );
 }
