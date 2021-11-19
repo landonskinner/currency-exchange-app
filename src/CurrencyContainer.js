@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import CurrencyCard from './CurrencyCard';
 import NotesForm from './NotesForm';
 import FilterForm from './FilterForm';
-import Dropdown from './Dropdown';
 import styled from 'styled-components';
 
 
@@ -92,6 +91,7 @@ function CurrencyContainer({ select, setSelect, currencyExchange, setCurrencyExc
     return (
         <div>
             <Dropdown select={select} setSelect={setSelect} setCurrencyExchange={setCurrencyExchange} />
+
             <FormStyle>
                 <FilterForm filter={filter} handleSearchFilter={handleSearchFilter} LHFilter={LHFilter} handleLHFilter={handleLHFilter} HLFilter={HLFilter} handleHLFilter={handleHLFilter}/>
             </FormStyle>

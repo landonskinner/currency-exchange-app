@@ -6,12 +6,15 @@ import Landing from "./Landing"
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
+
 import Dropdown from "./Dropdown";
 import styled from "styled-components";
 
 function App() {
   
   const [select, setSelect] = useState("ada")
+
+
   const [currencyExchange, setCurrencyExchange] = useState('')
 
 
