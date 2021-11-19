@@ -49,6 +49,8 @@ export default LandingCardContainer
 
 const Featured = styled.div`
     text-align: center;
+    padding: 60px;
+    height: 400px;
     h2 {
         padding: 5px;
         margin: 30px auto;
