@@ -20,10 +20,9 @@ console.log(select)
     })
       .then((r) => r.json())
       .then((newNotes) => {
-        console.log(newNotes);
+        history.push('/favorites')
       }
       )
-    history.push('favorites')
     }
 
 
@@ -50,7 +49,7 @@ console.log(select)
 export default NotesForm;
 
 const FormStyle = styled.div` 
-    margin: auto;
+    margin-left: 34%;
     width: 40%;
     padding: 10px;
 `

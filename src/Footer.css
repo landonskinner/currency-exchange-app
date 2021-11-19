@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    height: 250px;
 }
 
 .footer-links {

@@ -70,11 +70,3 @@ const HeaderStyle = styled.div`
     padding: 30px;
     height: 180px;
 `
-const FooterStyle = styled.div`
-background-color: grey;
-    padding: 30px;
-    height: 180px;
-      
-      bottom: 0;
-      width: 100%;
-`
