@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function FavoritesCard({ currency:{symbol, name, notes} }) {
+function FavoritesCard({ currency:{id, name, notes} }) {
     return (
         <Card>
-           <p className="currency-symbol">{symbol.toUpperCase()}</p>
-           <p className="currency-name">{name}</p>
-           <p className="currency-notes">{notes}</p> 
+            <p className="currency-name">{name}</p>
+            <p className="currency-symbol">{id.toUpperCase()}</p>
+            <p>User Notes:</p>
+            <p className="currency-notes">{notes}</p> 
         </Card>
     )
 }
@@ -38,17 +39,16 @@ const Card = styled.div`
       }
 
     .currency-name {
-        font-size: 30px;
+        font-size: 18px;
         font-weight: 700;
     }
     
     .currency-symbol {
-        font-style: italic;
-        letter-spacing: 2px;
+        font-size: 30px;
     }
     
     .currency-notes {
         font-weight: 700;
-        font-size: 24px;
+        font-size: 15px;
     }
 `
