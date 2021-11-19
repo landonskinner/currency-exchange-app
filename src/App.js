@@ -1,67 +1,79 @@
 import React, {useEffect, useState} from "react";
 import {Switch, Route} from 'react-router-dom';
 import Header from "./Header";
-import Search from "./Search";
 import Home from "./Home";
 import Landing from "./Landing"
 import FavoritesContainer from "./FavoritesContainer";
 import CurrencyContainer from "./CurrencyContainer";
 import './App.css'
-import Dropdown from './Dropdown';
-import currencies from "./db.json";
 
+import Dropdown from "./Dropdown";
+import styled from "styled-components";
 
 function App() {
   
-  const [currency, setCurrency] = useState('usd')
-  // const currency = 'usd'
+  const [select, setSelect] = useState("ada")
 
-  
-  // declaring dropdown value variable
-    const [value, setValue] = useState(null)
-  
-
-  // currency variable used for testing -- eventually should reference value of currency selected from drop-down menu
 
   const [currencyExchange, setCurrencyExchange] = useState('')
 
+
   useEffect(() => {
-    fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+    if (select === "Select Base Currency") {
+      return ''
+    } else {
+    fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${select}.json`)
     .then(resp => resp.json())
     .then(data => {
       setCurrencyExchange(data)
     })
-  }, [])
-
-  console.log(currencyExchange)
-
+    }
+  }, [select])
 
   return (
     <div className="App">
        <Header />
-       <Dropdown 
-        options={currencies}
-        prompt="Select Base Currency"
-        value={value}
-        onChange={val => setValue(val)}
-        />
-       <Search />
        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/landing">
-            <Landing />
+          <Route path="/currency">         
+            <CurrencyContainer  setCurrencyExchange={setCurrencyExchange} currencyExchange={currencyExchange} setSelect={setSelect} select={select} /> 
           </Route>
-          <Route path="/currency">           
-            {!!currencyExchange ? <CurrencyContainer currency={currency} currencyExchange={currencyExchange} /> : null}
+          <Route path="/landing">
+            <HeaderStyle>
+              <SelectStyle class="select">Select Your Currency:</SelectStyle>
+              <Dropdown select={select} setSelect={setSelect} setCurrencyExchange={setCurrencyExchange}/>
+            </HeaderStyle>
+            <Landing />
           </Route>
           <Route path="/favorites">
             <FavoritesContainer />
           </Route>
        </Switch>
+       <FooterStyle className="footer">Hello</FooterStyle>
     </div>
   );
 }
 
 export default App;
+
+const SelectStyle = styled.div`
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+`
+
+const HeaderStyle = styled.div`
+    background-color: grey;
+    padding: 30px;
+    height: 180px;
+`
+const FooterStyle = styled.div`
+background-color: grey;
+    padding: 30px;
+    height: 180px;
+      
+      bottom: 0;
+      width: 100%;
+`

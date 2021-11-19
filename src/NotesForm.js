@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 
-function NotesForm() {
+function NotesForm({select}) {
   const [notes, setNotes] = useState("");
+
+  const history = useHistory()
 
   function handleSubmit(e) {
     e.preventDefault();
     const formData = {
       notes: notes
     };
-
-    fetch("http://localhost:4000/currencies/1", {
+console.log(select)
+    fetch(`http://localhost:4000/currencies/${select}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(formData),
@@ -18,26 +22,35 @@ function NotesForm() {
       .then((newNotes) => {
         console.log(newNotes);
       }
-      )}
+      )
+    history.push('favorites')
+    }
 
 
   return (
-    <div>
+    <FormStyle>
       <form onSubmit={handleSubmit}>
-        <label>
-          Notes:
+        <label style={{fontSize: '18px'}}>
+          Notes: 
           <input
             type="text"
             id="notes"
             placeholder="Insert notes here"
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
+            style={{fontSize: '18px'}}
           />
         </label>
-        <button type="submit">Add Notes</button>
+        <button type="submit" style={{fontSize: '18px'}}>Add Notes</button>
       </form>
-    </div>
+    </FormStyle>
   );
 }
 
 export default NotesForm;
+
+const FormStyle = styled.div` 
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+`

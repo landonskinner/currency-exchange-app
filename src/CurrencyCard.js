@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function CurrencyCard({currency, indivCurrency}) {
+function CurrencyCard({indivCurrency}) {
     return (
         <Card>
             <p className="currency-name">{indivCurrency[0].toUpperCase()}</p>
