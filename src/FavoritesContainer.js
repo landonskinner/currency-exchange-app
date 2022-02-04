@@ -15,10 +15,8 @@ function FavoritesContainer() {
 }, [])
 
     function displayFavs() {
-        return newNotes.map(currency => { 
-            if (!currency['notes'] === false) {
-                return <FavoritesCard currency={currency} key={currency.id}/>
-            }
+        newNotes.map(currency => { 
+            if (!currency['notes'] === false) return <FavoritesCard currency={currency} key={currency.id}/>
         })
     }
 

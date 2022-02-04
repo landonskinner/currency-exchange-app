@@ -10,7 +10,7 @@ function LandingCardContainer() {
         const createFeaturedExchanges = (arr) => {
             const featuredExchanges = []
             arr.map(exchange => {
-                fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${exchange[0]}/${exchange[1]}.json`)
+                return fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${exchange[0]}/${exchange[1]}.json`)
                 .then(resp => resp.json())
                 .then(data => {
                     featuredExchanges.push([data[exchange[1]], exchange[0], exchange[1]])
