@@ -14,8 +14,6 @@ import styled from "styled-components";
 function App() {
   
   const [select, setSelect] = useState("ada")
-
-
   const [currencyExchange, setCurrencyExchange] = useState('')
 
 

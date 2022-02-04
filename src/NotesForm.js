@@ -13,7 +13,7 @@ function NotesForm({select}) {
       notes: notes
     };
 console.log(select)
-    fetch(`http://localhost:4000/currencies/${select}`, {
+    fetch(`https://crypto-mock-server.herokuapp.com/currencies/${select}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(formData),
