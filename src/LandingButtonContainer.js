@@ -7,7 +7,7 @@ function LandingButtonContainer() {
 
 
     useEffect(() => {
-        fetch('http://localhost:4000/currencies')
+        fetch('https://crypto-mock-server.herokuapp.com/currencies')
         .then(resp => resp.json())
         .then(data => {
             const newArray = [];
