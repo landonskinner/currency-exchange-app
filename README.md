@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+## Currency Exchange App
+This application was built using React and the Bootstrap framework. Using a currency exchange rate API, the Currency Exchange App allows the user to explore exchange rates across 180+ national currencies and cryptocurrencies. Upon entry into the application, the user can view featured exchanges of hand-selected currencies. Alternatively, the user is able to choose their desired base currency. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screen Shot 2022-02-04 at 10 50 43 AM](https://user-images.githubusercontent.com/89482763/152569371-bf65a1c6-2725-4877-8046-2f31dd9b0156.png)
 
-## Available Scripts
+With a base currency selected, the exchange rates will be displayed against all other currencies. With the ability to search for specific exchanges or order exchanges from high-to-low or low-to-high, the user has significant flexibility in displaying the data that they would like to see. For cryptocurrency or forex traders, the ability to makes notes on a specific base currency is a great way to document worthwhile exchanges or to keep an eye on promising trades. These notes persist as favorites for the user to view at any time.
 
-In the project directory, you can run:
+![Screen Shot 2022-02-04 at 10 51 28 AM](https://user-images.githubusercontent.com/89482763/152569396-ac4d9a26-3187-4b1e-89aa-6f77bee64a2e.png)
 
-### `npm start`
+## Hosted Link
+Visit the deployed site: https://currency-exchange-app.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies Used
+* React v17
+  * React Router v6
+  * React Router DOM v5
+* Bootstrap 5
+* CSS3
+* [Currency Exchange API](https://github.com/fawazahmed0/currency-api#readme)
+* Heroku (mock backend)
+* Vercel (frontend)
