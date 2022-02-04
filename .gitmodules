@@ -1,0 +1,3 @@
+[submodule "currency-mock-server"]
+	path = currency-mock-server
+	url = https://github.com/landonskinner/crypto-mock-server.git
