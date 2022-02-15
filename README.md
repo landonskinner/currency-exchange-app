@@ -8,7 +8,7 @@ With a base currency selected, the exchange rates will be displayed against all 
 ![Screen Shot 2022-02-04 at 10 51 28 AM](https://user-images.githubusercontent.com/89482763/152569396-ac4d9a26-3187-4b1e-89aa-6f77bee64a2e.png)
 
 ## Hosted Link
-Visit the deployed site: https://currency-exchange-app.vercel.app/
+Visit the deployed [site](https://currency-exchange-app.vercel.app/)! Or check out the [demo](https://www.youtube.com/watch?v=VYuZbrbVt60)!
 
 ## Technologies Used
 * React v17
